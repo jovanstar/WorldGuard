@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open City - GTA 5 Inspired Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="ui">
+            <div id="hud">
+                <div id="health">
+                    <span>Health: </span>
+                    <div id="healthBar">
+                        <div id="healthFill"></div>
+                    </div>
+                </div>
+                <div id="money">Money: $<span id="moneyAmount">1000</span></div>
+                <div id="wanted">
+                    <span>Wanted Level: </span>
+                    <div id="wantedStars">
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                        <span class="star">☆</span>
+                    </div>
+                </div>
+            </div>
+            <div id="controls">
+                <div class="control-info">
+                    <h3>Controls:</h3>
+                    <p>WASD - Move/Drive</p>
+                    <p>Mouse - Look around</p>
+                    <p>F - Enter/Exit vehicle</p>
+                    <p>Space - Handbrake</p>
+                    <p>Shift - Run/Boost</p>
+                    <p>Click - Hide controls</p>
+                </div>
+            </div>
+            <div id="minimap">
+                <canvas id="minimapCanvas" width="200" height="200"></canvas>
+                <div id="playerDot"></div>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div id="loadingScreen">
+        <div class="loading-content">
+            <h1>OPEN CITY</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Loading assets...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.20.0/cannon.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
